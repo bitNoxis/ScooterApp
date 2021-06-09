@@ -1,12 +1,16 @@
 package preisBerechnung;
 
+import panelFramework.*;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Date;
 import java.util.Scanner;
 
-public class GUIPanel implements ActionListener {
+
+
+public class GUIPanel extends StandardPanel implements ActionListener {
     JTextField tfEingabe, tfPreis, tfErgebnis, tfClock;
     JButton buttonBerechnung;
 
