@@ -13,13 +13,9 @@ public class GUIPanel implements ActionListener {
     double b = 0.3;
     double c = 0;
 
-    public GUIPanel() {
-        JFrame f = new JFrame();
-        f.setTitle("eScooter Berechnung");
-        f.setLocation(430, 100);
 
-        ImageIcon logo = new ImageIcon(getClass().getClassLoader().getResource("" + "res/logo.png"));
-        f.setIconImage(logo.getImage());
+    public GUIPanel() {
+        super();
 
         Timer t = new Timer(1000, updateClockAction);
         t.start();
@@ -42,7 +38,7 @@ public class GUIPanel implements ActionListener {
         tfErgebnis.setEditable(false);
         tfErgebnis.setText("Kosten in €");
 
-        new ImageIcon();
+        //new ImageIcon();
         new JLabel();
         JLabel myLabel;
 
@@ -54,15 +50,14 @@ public class GUIPanel implements ActionListener {
         buttonBerechnung.setBounds(50, 200, 150, 50);
         buttonBerechnung.addActionListener(this);
 
-        f.add(tfEingabe);
-        f.add(tfPreis);
-        f.add(tfErgebnis);
-        f.add(buttonBerechnung);
-        f.add(tfClock);
-        f.add(myLabel);
-        f.setSize(280, 340);
-        f.setLayout(null);
-        f.setVisible(true);
+        add(tfEingabe);
+        add(tfPreis);
+        add(tfErgebnis);
+        add(buttonBerechnung);
+        add(tfClock);
+        add(myLabel);
+        setLayout(null);
+        setVisible(true);
     }
 
     public void actionPerformed(ActionEvent e) {
