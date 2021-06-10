@@ -6,15 +6,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Date;
-import java.util.Scanner;
-
 
 
 public class GUIPanel extends StandardPanel implements ActionListener {
+
     JTextField tfEingabe, tfPreis, tfErgebnis, tfClock;
     JButton buttonBerechnung;
 
-    double b = 0.3;
+    double normalerPreis = 0.3;
     double c = 0;
 
 
@@ -42,7 +41,6 @@ public class GUIPanel extends StandardPanel implements ActionListener {
         tfErgebnis.setEditable(false);
         tfErgebnis.setText("Kosten in €");
 
-        //new ImageIcon();
         new JLabel();
         JLabel myLabel;
 
@@ -70,6 +68,7 @@ public class GUIPanel extends StandardPanel implements ActionListener {
         try {
             a = Double.parseDouble(s1);
             tfEingabe.setBackground(Color.white);
+
         } catch (Exception error) {
             tfEingabe.setText("Fehlerhafte Angabe");
             tfEingabe.setBackground(Color.red);
@@ -78,7 +77,7 @@ public class GUIPanel extends StandardPanel implements ActionListener {
             tfEingabe.setText("");
         }
         if (e.getSource() == buttonBerechnung) {
-            c = (a * b);
+            c = (a * normalerPreis);
         }
         String result = String.valueOf(c);
         tfErgebnis.setText(result + ("€"));

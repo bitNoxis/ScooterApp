@@ -1,4 +1,4 @@
-package preisBerechnung;
+package panelFramework;
 
 import java.awt.Color;
 import java.awt.Graphics;
