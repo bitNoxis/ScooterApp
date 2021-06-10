@@ -10,11 +10,19 @@ public class StartPanel extends StandardPanel implements ActionListener {
     JLabel welcomeLabel;
     JButton buttonZuBerechnung;
 
-    JFrame initframe() {
-        f.add(welcomeLabel);
-        f.add(buttonZuBerechnung);
-        buttonZuBerechnung.addActionListener(buttonCLickBerechnung);
-        return f;
+    public StartPanel() {
+        super();
+
+        buttonZuBerechnung = new JButton("Zur Peisberechnung");
+        buttonZuBerechnung.setBounds(200, 150, 100, 50);
+        buttonZuBerechnung.addActionListener(this);
+
+        welcomeLabel = new JLabel("Hallo und Willkommen bei ScoooteQ");
+        welcomeLabel.setBounds(50, 10, 150, 100);
+
+        add(buttonZuBerechnung);
+        add(welcomeLabel);
+        setVisible(true);
     }
 
 
