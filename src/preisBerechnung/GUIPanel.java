@@ -15,7 +15,7 @@ import java.util.Date;
 public class GUIPanel extends StandardPanel implements ActionListener {
 
     JTextField tfEingabe, tfPreis, tfErgebnis, tfClock;
-    JButton buttonBerechnung, backBtn;
+    JButton buttonBerechnung;
 
     double normalerPreis = 0.3;
     double c = 0;
@@ -50,7 +50,7 @@ public class GUIPanel extends StandardPanel implements ActionListener {
 
         ImageIcon i = new ImageIcon(this.getClass().getResource("/res/escooter.jpg"));
         myLabel = new JLabel(i);
-        myLabel.setSize(300, 300);
+        myLabel.setSize(400, 400);
 
         buttonBerechnung = new JButton("Berechne den Preis");
         buttonBerechnung.setBounds(50, 200, 150, 50);
@@ -60,7 +60,6 @@ public class GUIPanel extends StandardPanel implements ActionListener {
         add(tfPreis);
         add(tfErgebnis);
         add(buttonBerechnung);
-        //add(backBtn);
         add(tfClock);
         add(myLabel);
         setLayout(null);
