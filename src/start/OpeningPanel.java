@@ -49,7 +49,18 @@ public class OpeningPanel implements ActionListener {
         new GUIPanel();
         f.setVisible(false);
     }
-};
+
+    ;
+
+    ActionListener info = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JOptionPane.showMessageDialog(null,
+                    "Infoinfoinfo");
+        }
+    };
+
+}
 
 
 
