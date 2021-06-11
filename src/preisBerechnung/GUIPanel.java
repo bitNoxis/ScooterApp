@@ -5,13 +5,17 @@ import panelFramework.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 
 public class GUIPanel extends StandardPanel implements ActionListener {
 
     JTextField tfEingabe, tfPreis, tfErgebnis, tfClock;
-    JButton buttonBerechnung;
+    JButton buttonBerechnung, backBtn;
 
     double normalerPreis = 0.3;
     double c = 0;
@@ -23,7 +27,7 @@ public class GUIPanel extends StandardPanel implements ActionListener {
         Timer t = new Timer(1000, updateClockAction);
         t.start();
         tfClock = new JTextField();
-        tfClock.setBounds(40, 10, 185, 20);
+        tfClock.setBounds(35, 10, 185, 20);
         tfClock.setBackground(Color.white);
 
         tfEingabe = new JTextField();
@@ -56,6 +60,7 @@ public class GUIPanel extends StandardPanel implements ActionListener {
         add(tfPreis);
         add(tfErgebnis);
         add(buttonBerechnung);
+        //add(backBtn);
         add(tfClock);
         add(myLabel);
         setLayout(null);
