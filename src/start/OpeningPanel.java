@@ -15,9 +15,10 @@ public class OpeningPanel implements ActionListener {
     JButton buttonZuBerechnung = new JButton("Zur Peisberechnung");
 
     ImageIcon i = new ImageIcon(Objects.requireNonNull(this.getClass().getResource("/res/escooter.jpg")));
-    ImageIcon logo = new ImageIcon(Objects.requireNonNull(this.getClass().getResource("/res/logo.png")));
+    ImageIcon l = new ImageIcon(Objects.requireNonNull(this.getClass().getResource("/res/logo.png")));
     ImageIcon iconinfo = new ImageIcon(Objects.requireNonNull(this.getClass().getResource("/res/iconButton.png")));
     JButton buttonInfo = new JButton(iconinfo);
+    JButton logoInfo = new JButton(l);
 
 
     public OpeningPanel() {
@@ -30,13 +31,15 @@ public class OpeningPanel implements ActionListener {
         buttonZuBerechnung.addActionListener(this);
         buttonInfo.setBounds(320, 10, 50, 50);
         buttonInfo.addActionListener(info);
+        logoInfo.setBounds(10, 10, 50, 50);
+        logoInfo.addActionListener(logo);
         labelWelcome.setBounds(70, 100, 250, 100);
         labelWelcome.setForeground(Color.WHITE);
         labelWelcome.setFont(new Font("Arial", Font.BOLD, 20));
 
         new JLabel();
         JLabel myLabel2;
-        myLabel2 = new JLabel(logo);
+        myLabel2 = new JLabel(l);
         myLabel2.setSize(40, 40);
 
         new JLabel();
@@ -45,6 +48,7 @@ public class OpeningPanel implements ActionListener {
         myLabel.setSize(400, 400);
 
         f.add(buttonInfo);
+        f.add(logoInfo);
         f.add(buttonZuBerechnung);
         f.add(labelWelcome);
         f.add(myLabel);
@@ -59,13 +63,11 @@ public class OpeningPanel implements ActionListener {
         f.dispose();
     }
 
-    ActionListener info = new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            JOptionPane.showMessageDialog(null,
-                    "Infoinfoinfo");
-        }
-    };
+    ActionListener info = e -> JOptionPane.showMessageDialog(null,
+            "Infoinfoinfo");
+
+    ActionListener logo = e -> JOptionPane.showMessageDialog(null,
+            "Wir sind ScooteQ und wollen deine Mobilität revolutionieren");
 
 }
 

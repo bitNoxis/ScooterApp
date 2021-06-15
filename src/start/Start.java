@@ -7,8 +7,9 @@ public class Start {
 
     }
 }
-//TODO design Fertig machen (sinnvoller InfoText, design abrunden)
 
+
+//TODO design Fertig machen (sinnvoller InfoText)
 //TODO comboBox für verschiedene Preise
 //TODO user Login
 //TODO Bezahlsystem
