@@ -14,7 +14,7 @@ import java.util.Date;
 public class GUIPanel extends StandardPanel implements ActionListener {
 
     JTextField tfEingabe, tfPreis, tfErgebnis, tfClock;
-    JButton buttonBerechnung;
+    JButton buttonBerechnung, buttonzurück;
 
     double normalerPreis = 0.3;
     double c = 0;
@@ -55,11 +55,16 @@ public class GUIPanel extends StandardPanel implements ActionListener {
         buttonBerechnung.setBounds(115, 250, 150, 50);
         buttonBerechnung.addActionListener(this);
 
+        buttonzurück= new JButton("Zurück");
+        buttonzurück.setBounds(10,10,90,50);
+        buttonzurück.addActionListener(actionzurueck);
+
         add(tfEingabe);
         add(tfPreis);
         add(tfErgebnis);
         add(buttonBerechnung);
         add(tfClock);
+        add(buttonzurück);
         add(myLabel);
         setLayout(null);
         setVisible(true);
