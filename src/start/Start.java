@@ -7,7 +7,7 @@ public class Start {
 
     }
 }
-//TODO design Fertig machen (sinnvolelr InfoText, Rundung, Schönere Zeitangabe, zurückKnopf)
+//TODO design Fertig machen (sinnvoller InfoText, design abrunden)
 
 //TODO comboBox für verschiedene Preise
 //TODO user Login

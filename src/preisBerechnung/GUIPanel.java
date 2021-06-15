@@ -1,14 +1,13 @@
 package preisBerechnung;
 
-import panelFramework.*;
+import panelFramework.Hint;
+import panelFramework.StandardPanel;
+import start.OpeningPanel;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Date;
 
 
@@ -27,21 +26,21 @@ public class GUIPanel extends StandardPanel implements ActionListener {
         Timer t = new Timer(1000, updateClockAction);
         t.start();
         tfClock = new JTextField();
-        tfClock.setBounds(35, 10, 185, 20);
+        tfClock.setBounds(130, 25, 120, 20);
         tfClock.setBackground(Color.white);
 
         tfEingabe = new JTextField();
-        tfEingabe.setBounds(50, 50, 150, 20);
+        tfEingabe.setBounds(115, 100, 150, 20);
         tfEingabe.setUI(new Hint("Gefahrene Kilometer", true));
         tfEingabe.addActionListener(this);
 
         tfPreis = new JTextField();
-        tfPreis.setBounds(50, 100, 150, 20);
+        tfPreis.setBounds(115, 150, 150, 20);
         tfPreis.setEditable(false);
         tfPreis.setText("30ct pro Kilometer");
 
         tfErgebnis = new JTextField();
-        tfErgebnis.setBounds(50, 150, 150, 20);
+        tfErgebnis.setBounds(115, 200, 150, 20);
         tfErgebnis.setEditable(false);
         tfErgebnis.setText("Kosten in €");
 
@@ -53,7 +52,7 @@ public class GUIPanel extends StandardPanel implements ActionListener {
         myLabel.setSize(400, 400);
 
         buttonBerechnung = new JButton("Berechne den Preis");
-        buttonBerechnung.setBounds(50, 200, 150, 50);
+        buttonBerechnung.setBounds(115, 250, 150, 50);
         buttonBerechnung.addActionListener(this);
 
         add(tfEingabe);
