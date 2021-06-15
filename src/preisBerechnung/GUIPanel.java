@@ -82,15 +82,27 @@ public class GUIPanel extends StandardPanel implements ActionListener {
         if (e.getSource() == buttonBerechnung) {
             c = (a * normalerPreis);
         }
-        String result = String.valueOf(c);
+        String result = String.valueOf(java.lang.Math.round(c * 100) / 100.);
         tfErgebnis.setText(result + ("€"));
     }
 
     ActionListener updateClockAction = new ActionListener() {
         public void actionPerformed(ActionEvent e) {
-            tfClock.setText(new Date().toString());
+            tfClock.setText(cutBack(new Date().toString(), " ", 2));
         }
     };
+
+    ActionListener actionzurueck = e -> {
+        new OpeningPanel();
+        dispose();
+    };
+
+    public String cutBack(String txt, String teil, int number) {
+        for (int i = 0; i < number; i++) {
+            txt = txt.substring(0, txt.lastIndexOf(teil));
+        }
+        return txt;
+    }
 
 
 }
