@@ -67,7 +67,7 @@ public class OpeningPanel implements ActionListener {
             "Infoinfoinfo");
 
     ActionListener logo = e -> JOptionPane.showMessageDialog(null,
-            "Wir sind ScooteQ und wollen deine Mobilität revolutionieren");
+            "Wir sind ScooteQ und wir werden deine Mobilität revolutionieren");
 
 }
 
