@@ -1,5 +1,7 @@
 package start;
 
+import eröffnungsSeite.OpeningPanel;
+
 public class Start {
 
     public static void main(String[] args) {

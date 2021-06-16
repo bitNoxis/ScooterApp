@@ -2,7 +2,7 @@ package preisBerechnung;
 
 import panelFramework.Hint;
 import panelFramework.StandardPanel;
-import start.OpeningPanel;
+import eröffnungsSeite.OpeningPanel;
 
 import javax.swing.*;
 import java.awt.*;

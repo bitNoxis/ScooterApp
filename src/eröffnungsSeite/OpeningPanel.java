@@ -1,4 +1,4 @@
-package start;
+package eröffnungsSeite;
 
 import panelFramework.StandardPanel;
 import preisBerechnung.GUIPanel;
@@ -33,9 +33,9 @@ public class OpeningPanel implements ActionListener {
         buttonInfo.addActionListener(info);
         logoInfo.setBounds(10, 10, 50, 50);
         logoInfo.addActionListener(logo);
-        labelWelcome.setBounds(70, 100, 250, 100);
+        labelWelcome.setBounds(90, 60, 300, 200);
         labelWelcome.setForeground(Color.WHITE);
-        labelWelcome.setFont(new Font("Arial", Font.BOLD, 20));
+        labelWelcome.setFont(new Font("Arial", Font.BOLD, 30));
 
         new JLabel();
         JLabel myLabel2;

@@ -8,7 +8,8 @@ import java.awt.event.FocusListener;
 import javax.swing.plaf.basic.BasicTextFieldUI;
 import javax.swing.text.JTextComponent;
 
-//Klasse dient zum ausgrauen
+//Klasse dient zum ausgrauen des Textes
+
 public class Hint extends BasicTextFieldUI implements FocusListener {
 
     private String hint;
