@@ -1,8 +1,8 @@
 package preisBerechnung;
 
+import eröffnungsSeite.OpeningPanel;
 import panelFramework.Hint;
 import panelFramework.StandardPanel;
-import eröffnungsSeite.OpeningPanel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,16 +11,16 @@ import java.awt.event.ActionListener;
 import java.util.Date;
 
 
-public class GUIPanel extends StandardPanel implements ActionListener {
+public class MinBerechnung extends StandardPanel implements ActionListener {
 
     JTextField tfEingabe, tfPreis, tfErgebnis, tfClock;
     JButton buttonBerechnung, buttonzurück;
 
-    double normalerPreis = 0.3;
+    double preisProMin = 0.1;
     double c = 0;
 
 
-    public GUIPanel() {
+    public MinBerechnung() {
         super();
 
         Timer t = new Timer(1000, updateClockAction);
@@ -31,13 +31,13 @@ public class GUIPanel extends StandardPanel implements ActionListener {
 
         tfEingabe = new JTextField();
         tfEingabe.setBounds(115, 100, 150, 20);
-        tfEingabe.setUI(new Hint("Gefahrene Kilometer", true));
+        tfEingabe.setUI(new Hint("Gefahrene Minuten", false));
         tfEingabe.addActionListener(this);
 
         tfPreis = new JTextField();
         tfPreis.setBounds(115, 150, 150, 20);
         tfPreis.setEditable(false);
-        tfPreis.setText("30ct pro Kilometer");
+        tfPreis.setText("15ct pro Minute");
 
         tfErgebnis = new JTextField();
         tfErgebnis.setBounds(115, 200, 150, 20);
@@ -85,9 +85,9 @@ public class GUIPanel extends StandardPanel implements ActionListener {
             tfEingabe.setText("");
         }
         if (e.getSource() == buttonBerechnung) {
-            c = (a * normalerPreis);
+            c = (a * preisProMin);
         }
-        String result = String.valueOf(java.lang.Math.round(c * 100) / 100.);
+        String result = String.valueOf(Math.round(c * 100) / 100.);
         tfErgebnis.setText(result + ("€"));
     }
 
